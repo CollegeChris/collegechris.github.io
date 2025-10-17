@@ -10,16 +10,11 @@ body {
   margin: 0 auto;
 }
 
-div {
-  color: darkslategray;
-  font-weight: bold;
-}
-
-a {
+li {
   color: green;
 }
 
-a:hover {
+li:hover {
   color: darkgreen;
   text-decoration: none;
 }
