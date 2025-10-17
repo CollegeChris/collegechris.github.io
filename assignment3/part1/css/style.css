@@ -10,16 +10,16 @@ body {
   margin: 0 auto;
 }
 
-div.job-title {
+.job-title {
   color: darkslategray;
   font-weight: bold;
 }
 
-li {
+a {
   color: green;
 }
 
-li:hover {
+a:hover {
   color: darkgreen;
   text-decoration: none;
 }
