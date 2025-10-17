@@ -3,5 +3,9 @@ html {
 }
 
 body {
+  background-color: #efefef;
   font: 1.2em / 1.5 system-ui;
+  padding: 20px;
+  width: 500px;
+  margin: 0 auto;
 }
