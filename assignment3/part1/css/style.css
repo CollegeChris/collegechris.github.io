@@ -10,6 +10,11 @@ body {
   margin: 0 auto;
 }
 
+div.job-title {
+  color: darkslategray;
+  font-weight: bold;
+}
+
 li {
   color: green;
 }
