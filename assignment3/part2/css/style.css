@@ -57,3 +57,47 @@ footer {
 footer p {
   text-align: center;
 }
+
+/* Links */
+
+a {
+  color: #aa6666;
+  text-decoration: underline;
+}
+
+a:visited {
+  color: #7a4747;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: #ffadad;
+  text-decoration: none;
+}
+
+a:focus {
+  color: #ffadad;
+  text-decoration: none;
+}
+
+a[href^='http'] {
+  background-image: image("images/external-link-52.png");
+}
+
+/* Lists */
+
+ul {
+  line-height: 1.4;
+  margin: 0;
+  list-style-type: square;
+}
+
+nav ul {
+  font-family: "Times New Roman", serif;
+  list-style-type: none;
+  font-weight: bold;
+  line-height: 100px;
+  text-align: center;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
