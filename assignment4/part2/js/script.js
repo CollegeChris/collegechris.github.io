@@ -4,6 +4,12 @@ const thumbBar = document.querySelector(".thumb-bar");
 const btn = document.querySelector("button");
 const overlay = document.querySelector(".overlay");
 
+const baseURL = "./assets";
+
+function updateDisplayedImage()
+{
+}
+
 const images = [
 	{
 		src: "pic1.jpg",
@@ -28,8 +34,20 @@ const images = [
 ];
 
 for (const image of images) {
-	//alert(image.alt);
 	const newImage = document.createElement("img");
-	newImage.src = baseURL + image.src;
+	newImage.href = baseURL + image.src;
+	newImage.textContent = image.alt;
+	newImage.tabIndex = "1";
+	thumbBar.appendChild(newImage);
+	
 	//alert(newImage.src);
+	
+	/*
+	newImage.addEventListener("click", () => {
+		displayedImage.src = newImage.src;
+		displayedImage.alt = newImage.alt;
+	});
+	*/
+	
+	newImage.addEventListener("click", updateDisplayedImage);
 }
