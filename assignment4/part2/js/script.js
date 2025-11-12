@@ -26,3 +26,10 @@ const images = [
 		alt: "Large moth on a leaf"
 	},	
 ];
+
+for (const image of images) {
+	//alert(image.alt);
+	const newImage = document.createElement("img");
+	newImage.src = baseURL + image.src;
+	//alert(newImage.src);
+}
