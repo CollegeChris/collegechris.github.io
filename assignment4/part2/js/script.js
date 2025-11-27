@@ -4,11 +4,7 @@ const thumbBar = document.querySelector(".thumb-bar");
 const btn = document.querySelector("button");
 const overlay = document.querySelector(".overlay");
 
-const baseURL = "./assets";
-
-function updateDisplayedImage()
-{
-}
+const baseURL = "./images/";
 
 const images = [
 	{
@@ -30,13 +26,14 @@ const images = [
 	{
 		src: "pic5.jpg",
 		alt: "Large moth on a leaf"
-	},	
+	}
 ];
 
 for (const image of images) {
+	
 	const newImage = document.createElement("img");
-	newImage.href = baseURL + image.src;
-	newImage.textContent = image.alt;
+	newImage.src = baseURL + image.src;
+	newImage.alt = image.alt;
 	newImage.tabIndex = "1";
 	thumbBar.appendChild(newImage);
 	
@@ -50,4 +47,18 @@ for (const image of images) {
 	*/
 	
 	newImage.addEventListener("click", updateDisplayedImage);
+	
+	newImage.addEventListener("keydown", (newImage) =>
+	{
+		if (newImage.code === "Enter")
+		{
+			updateDisplayedImage(newImage);
+		}
+	});
+}
+
+function updateDisplayedImage(newImage)
+{
+	displayedImage.src = newImage.src;
+	displayedImage.alt = newImage.alt;
 }
