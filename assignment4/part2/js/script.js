@@ -62,3 +62,20 @@ function updateDisplayedImage(newImage)
 	displayedImage.src = newImage.target.src;
 	displayedImage.alt = newImage.target.alt;
 }
+
+btn.addEventListener("click", () =>
+{
+	// Darken
+	if (btn.classList.contains("dark"))
+	{
+		overlay.style.backgroundColor = "rgb(0 0 0 / 0.5)";
+		btn.textContent = "Lighten";
+	}
+	// Lighten
+	else
+	{
+		overlay.style.backgroundColor = "rgb(0 0 0 / 0)";
+		btn.textContent = "Darken";
+	}
+	btn.classList.toggle("dark");
+});
