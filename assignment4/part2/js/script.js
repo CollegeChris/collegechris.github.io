@@ -59,6 +59,6 @@ for (const image of images) {
 
 function updateDisplayedImage(newImage)
 {
-	displayedImage.src = newImage.src;
-	displayedImage.alt = newImage.alt;
+	displayedImage.src = newImage.target.src;
+	displayedImage.alt = newImage.target.alt;
 }
